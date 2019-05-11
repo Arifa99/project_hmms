@@ -1,4 +1,9 @@
-Hostel Mess Managemet System
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
+
+# Hostel Mess Management System (HMMS) 
 
 Hostel Mess Management System project is discipline of the planning, organizing and
 managing the mess activities. The project is specifically designed for the use of mess
@@ -9,6 +14,13 @@ System can be used by Mess Manager to manage mess activities like managing inven
 fees and dues. The system allows the Student to update their dinning status, view mess menu
 and their fees and dues. The project is specifically designed for the use of Mess Manager and
 Resident Students.
-This project has been developed using PHP (Hypertext Pre-processor), JavaScript and
-MySQL (Structured Query Language). For formatting we have used HTML (Hypertext
-Mark-up Language) and CSS (Cascading Style Sheet). 
+
+## Technologies
+- HTML5
+- CSS
+- PHP
+- JavaScript
+- MySQL
+
+## Setup
+To run this project, install it locally on XAMMP server
