@@ -377,22 +377,4 @@ CREATE TABLE IF NOT EXISTS `student` (
 --
 
 INSERT INTO `student` (`id`, `name`, `course`, `enroll`, `room`, `block`, `email`, `password`, `photo`) VALUES
-(1, 'Arifa Nafees', 'DPIT', 'GI7405', 110, 'A', 'nafeesarifa07@gmail.com', '1234', 'student-2-512.png'),
-(2, 'Zainab Israr Ansari', 'DPIT', 'GI7419', 205, 'A', 'zainabisrar99@gmail.com', 'zainab', '380ff3f0124c0c77bfcfd0adb3402b8b.jpg'),
-(3, 'Falak Naz', 'dpce', 'gi7579', 13, 'A', 'falucknaz@gmail.com', 'arifalak', ''),
-(4, 'Samina Parween', 'DPCE', 'GI7593', 14, 'A', 'samina2000pr@gmail.com', 'samina', 'IMG-20171122-WA0013.jpg'),
-(5, 'Rukhsar Tasnim', 'DPEE', 'GI7411', 13, 'A', 'rukhsar.tasnim01@gmail.com', '8979tanya', ''),
-(6, 'nausheen anwar', 'dpce', 'gi7586', 115, 'B', 'nausheenanwar39@gmail.com', 'nausheen', 'IMG-20171202-WA0003.jpg'),
-(7, 'Bushra Yasmeen', 'DPCE', 'gi7431', 114, 'B', 'bushra19yasmeen@gmail.com', 'umakhan', 'IMG-20171130-WA0004.jpg'),
-(9, 'Farheen', 'BDS', 'gh7864', 110, 'A', 'farheen@gmail.com', 'farheen', '74306eef5860833e2e47ff169a73b45b.jpg'),
-(17, 'Shagufta Parween', 'DPCE', 'GI7401', 12, 'A', 'shagufta12sp@gmail.com', 'arifa', 'IMG-20171202-WA0011.jpg'),
-(22, 'xyz', 'dpit', 'gi7111', 110, 'B', 'xyz@gmail.com', '1234', '20170328_183107.jpg'),
-(14, 'Aafreen anjum', 'DPEE', 'gi7598', 114, 'A', 'aafreenanjum123@yahoo.com', 'colgate', 'Tulips.jpg'),
-(18, 'deeksha', 'diploma in engg', 'gi7415', 111, 'A', 'jadaundeeksha@gmail.com', 'pagal!@#$%', 'student-2-512.png'),
-(15, 'Naqoosh Fatima', 'DPIT', 'GJ4881', 110, 'A', 'naqooshfatima1999@gmail.com', 'falak', 'tumblr_ouf5g8beTS1qdxa23o1_500.jpg'),
-(23, 'Tabassum yusuf', 'DPEE', 'GI7428', 219, 'A', 'tabassum7507@gmail.com', '12345', 'student-2-512.png'),
-(20, 'Fareha Mohammadi', 'DPEE', 'GJ4889', 3, 'A', 'fareha786muz@gmail.com', '8vlm@1yl', 'admin-icon.png'),
-(21, 'Umra Khan', 'DPCE', 'GI7592', 114, 'A', 'umrakhan1441@gmail.com', '1234', 'IMG_20180407_220430.jpg'),
-(24, 'Asma Irfan', 'Btech', 'gk9129', 10, 'B', 'arisha.asma@gmail.com', 'abc', 'admin-icon.png'),
-(25, 'Aayesha Fatema', 'B. Tech', 'GK7607', 7, 'B', 'atfatema@gmail.com', 'pandapurse', 'student-2-512.png'),
-(26, 'Zainab Mansoor', 'B. Tech', 'Gk7700', 7, 'B', 'jgfgfggh2ghf2@gmail.com', '123456', 'DSC_0340-EFFECTS.jpg');
+(1, 'Arifa Nafees', 'DPIT', 'GI7405', 110, 'A', 'nafeesarifa07@gmail.com', '1234', 'student-2-512.png')
