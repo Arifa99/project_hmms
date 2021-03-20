@@ -1,12 +1,8 @@
 <?php
-
+include("admindbconn.php");
     if (isset($_POST['submitted']))
     {
-        $host='localhost';
-        $user='root';
-        $pass='arifa';
-        $dbname='hmms';
-        $dbconn=mysqli_connect($host,$user,$pass,$dbname);
+        include("admindbconn.php");
         
         $shopname = $_POST['seller'];
         $itemid = $_POST['itemid'];
@@ -265,11 +261,7 @@
                     <option> <center value=""> --Seller--</center></option>
                     
                     <?php 
-                        $host="localhost";
-                        $user="root";
-                        $password="arifa";
-                        $db="hmms";
-                        $dbconn=mysqli_connect($host,$user,$password,$db);
+                      
                         $query = "SELECT * FROM `seller`";
                         $result1 = mysqli_query($dbconn, $query);
 
@@ -285,11 +277,7 @@
                     <option> <center value=""> --Item Name--</center></option>
           
                     <?php 
-                        $host="localhost";
-                        $user="root";
-                        $password="arifa";
-                        $db="hmms";
-                        $dbconn=mysqli_connect($host,$user,$password,$db);
+                        
                         $query = "SELECT * FROM `item`";
                         $result1 = mysqli_query($dbconn, $query);
 

@@ -104,18 +104,14 @@ input[type=submit]:hover {
         
         <div class="container">
            <form name="#" method="post" enctype="multipart/form-data">
-					<?php 
+			<?php 
              
-                $host="localhost";
-                $user="root";
-                $password="arifa";
-                $db="hmms";
-                $dbconn=mysqli_connect($host,$user,$password,$db);
+             include("admindbconn.php");
 
                 $select_q="select * from admin where id=$id";
                 $q=mysqli_query($dbconn, $select_q);
                         
-      ?>
+            ?>
 
                 <div class="row">
                     <div class="col-25">

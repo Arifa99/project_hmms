@@ -1,14 +1,7 @@
 <?php
+include("admindbconn.php");
    if (isset($_POST['submitted']))
-    {
-        $host='localhost';
-        $user='root';
-        $pass='arifa';
-        $dbname='hmms';
-        $dbconn=mysqli_connect($host,$user,$pass,$dbname);
-
-       
-                    
+    {              
        $options=$_POST['op'];
        $qun=$_POST['txt'];
        $size =count($options);
@@ -232,11 +225,7 @@ th {
          
     
    <?php 
-                $host="localhost";
-                $user="root";
-                $password="arifa";
-                $db="hmms";
-                $dbconn=mysqli_connect($host,$user,$password,$db);
+               
                 $sqlget = "SELECT c . * , p . *
                 
                 FROM stock c, item p

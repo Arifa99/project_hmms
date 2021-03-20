@@ -1,20 +1,17 @@
 <?php 
+ 
     session_start();
-   $host="localhost";
-    $user="root";
-    $password="arifa";
-    $db="hmms";
-    mysql_connect($host,$user,$password);
-    mysql_select_db($db);
+    include("dbconn.php");
+    mysqli_select_db($dbconn ,$dbName);
 
     if($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $myusername = ($_POST['enroll']);
         $mypassword = ($_POST['password']);
         $sql = "SELECT id FROM student WHERE enroll = '$myusername' and password = '$mypassword'";
-        $result=mysql_query($sql);
+        $result=mysqli_query($dbconn , $sql);
     
-        if(mysql_num_rows($result)==1)
+        if(mysqli_num_rows($result)==1)
         {
             $_SESSION["enroll"] = $myusername;
             header( "Location:../student/student.php");

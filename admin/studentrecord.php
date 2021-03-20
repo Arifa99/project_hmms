@@ -110,12 +110,7 @@
       </form>
   </div>
             <?php 
-             
-                $host="localhost";
-                $user="root";
-                $password="arifa";
-                $db="hmms";
-                $dbconn=mysqli_connect($host,$user,$password,$db);
+                include("admindbconn.php");
                 $sqlget = "SELECT * FROM student ORDER BY enroll";
                 $sqldata = mysqli_query($dbconn, $sqlget) or die('error getting');
                if(isset($_POST['submit']))

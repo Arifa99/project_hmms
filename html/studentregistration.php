@@ -2,11 +2,7 @@
     if (isset($_POST['submitted']))
     {
         $target = "images/".basename($_FILES['photo']['name']);
-        $host='localhost';
-        $user='root';
-        $pass='arifa';
-        $dbname='hmms';
-        $dbconn=mysqli_connect($host,$user,$pass,$dbname);
+        include("dbconn.php");
 
         $name = $_POST['name'];
         $course = $_POST['course'];

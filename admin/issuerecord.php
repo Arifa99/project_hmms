@@ -116,11 +116,7 @@
       </form>
   </div>
    <?php 
-                $host="localhost";
-                $user="root";
-                $password="arifa";
-                $db="hmms";
-                $dbconn=mysqli_connect($host,$user,$password,$db);
+                include("admindbconn.php");
                  $sqlget = "SELECT c . * , p . * ,t . * FROM issueitem c, item p, stock t WHERE c.itemid = p.id and p.id = t.itemid";
                 $sqldata = mysqli_query($dbconn, $sqlget) or die('error getting');
                 if(isset($_POST['submit']))

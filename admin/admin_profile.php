@@ -1,10 +1,5 @@
 <?php
-
-$host="localhost";
-                $user="root";
-                $password="arifa";
-                $db="hmms";
-                $dbconn=mysqli_connect($host,$user,$password,$db);
+include("admindbconn.php");
 
 $id=$_GET['id'];
 
@@ -140,18 +135,12 @@ input[type=submit]:hover {
             
            <form name="#" method="post" enctype="multipart/form-data">
            <h1 style="font-family: monospace;">Edit Profile</h1>
-					<?php 
+		    <?php 
              
-                $host="localhost";
-                $user="root";
-                $password="arifa";
-                $db="hmms";
-                $dbconn=mysqli_connect($host,$user,$password,$db);
-
                 $select_q="select * from admin where id=$id";
                 $q=mysqli_query($dbconn, $select_q);
                         
-      ?>
+            ?>
            <div class="i">  
             <?php echo "<img src='../html/images/".$r['photo']."'>" ?>
                </div><br><br>

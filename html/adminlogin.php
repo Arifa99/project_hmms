@@ -1,20 +1,15 @@
 <?php 
     session_start();
+    include("dbconn.php");
+    mysqli_select_db($dbconn , $dbName);
     
-    $host="localhost";
-    $user="root";
-    $password="arifa";
-    $db="hmms";
-    mysql_connect($host,$user,$password);
-    mysql_select_db($db);
-
     if($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $myusername = ($_POST['email']);
         $mypassword = ($_POST['password']);
         $sql = "SELECT id FROM admin WHERE email = '$myusername' and password = '$mypassword'";
-        $result=mysql_query($sql);
-        if(mysql_num_rows($result)==1){
+        $result=mysqli_query($dbconn, $sql);
+        if(mysqli_num_rows($result)==1){
             $_SESSION["email"] = $myusername;
             header( "Location:../admin/home.php");
             }

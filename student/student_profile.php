@@ -1,39 +1,34 @@
 <?php
+    include("studentdbconn.php");
 
-                $host="localhost";
-                $user="root";
-                $password="arifa";
-                $db="hmms";
-                $dbconn=mysqli_connect($host,$user,$password,$db);
+    $id=$_GET['id'];
 
-                $id=$_GET['id'];
+    //echo $id;
+    $sq=mysqli_query($dbconn,("select * from student where id=".$id));
+    $r=mysqli_fetch_array($sq);
 
-                 echo $id;
-$sq=mysqli_query($dbconn,("select * from student where id=".$id));
-$r=mysqli_fetch_array($sq);
-
-if(isset($_POST['submitted']))
-{
-    $target = "../html/images/".basename($_FILES['photo']['name']);
-    $name=$_POST['name'];
-    $enroll=$_POST['enroll'];
-    $room=$_POST['room'];
-    $course=$_POST['course'];
-    $block=$_POST['block'];
-    $email=$_POST['email'];
-    $password=$_POST['password'];
-    $image = $_FILES['photo']['name'];
- 
-$q="update student set name='$name', enroll='$enroll', room='$room', block='$block', email='$email', password='$password', photo='$image', course='$course' where id=$id ";
-if(mysqli_query($dbconn, $q))
+    if(isset($_POST['submitted']))
     {
-    move_uploaded_file($_FILES['photo']['tmp_name'], $target);
-    header("location: student.php");
-    }else
-    {
-      echo "Couldn't Update";
+        $target = "../html/images/".basename($_FILES['photo']['name']);
+        $name=$_POST['name'];
+        $enroll=$_POST['enroll'];
+        $room=$_POST['room'];
+        $course=$_POST['course'];
+        $block=$_POST['block'];
+        $email=$_POST['email'];
+        $password=$_POST['password'];
+        $image = $_FILES['photo']['name'];
+    
+        $q="update student set name='$name', enroll='$enroll', room='$room', block='$block', email='$email', password='$password', photo='$image', course='$course' where id=$id ";
+        if(mysqli_query($dbconn, $q))
+        {
+            move_uploaded_file($_FILES['photo']['tmp_name'], $target);
+            header("location: student.php");
+        }else
+        {
+            echo "Couldn't Update";
+        }
     }
-}
 
 ?>
    
@@ -141,14 +136,9 @@ input[type=submit]:hover {
            <form name="#" method="post" enctype="multipart/form-data">
            <h1 style="font-family: monospace;">Edit Profile</h1>
            <input type=hidden name="submitted" value="true" /> 
-					<?php 
+		<?php 
              
-                $host="localhost";
-                $user="root";
-                $password="arifa";
-                $db="hmms";
-                $dbconn=mysqli_connect($host,$user,$password,$db);
-
+               
                 $select_q="select * from student where id=$id";
                 $q=mysqli_query($dbconn, $select_q);
                         

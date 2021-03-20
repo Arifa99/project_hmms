@@ -1,10 +1,5 @@
 <?php
-
-				$host="localhost";
-                $user="root";
-                $password="arifa";
-                $db="hmms";
-                $dbconn=mysqli_connect($host,$user,$password,$db);
+include("admindbconn.php");
 
 $id=$_GET['id'];
 
@@ -200,16 +195,11 @@ th, td {
 					<form name="#" method="post" enctype="multipart/form-data">
 					<?php 
              
-                $host="localhost";
-                $user="root";
-                $password="arifa";
-                $db="hmms";
-                $dbconn=mysqli_connect($host,$user,$password,$db);
 
                 $select_q="select * from menu where id=$id";
                 $q=mysqli_query($dbconn, $select_q);
                         {
-      ?>
+                 ?>
                         <fieldset><legend class="legend"><b>MESS MENU</b></legend>
 						
 						<table style="color:white;font-size:17px;">

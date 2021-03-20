@@ -1,9 +1,5 @@
 <?php
-$host='localhost';
-$user='root';
-$pass='arifa';
-$dbname='hmms';
-$dbconn=mysqli_connect($host,$user,$pass,$dbname);
+include("admindbconn.php");
 $id=$_GET['id'];
 
 $currentdate = date('Y-m-d');
@@ -146,12 +142,6 @@ $sqldata = mysqli_query($dbconn, $sqlinsert) or die('error getting');
   <input type="textbox" name="enroll"  value= "<?php echo $id ?>" readonly><br> 
   <?php 
              
-            
-                $host="localhost";
-                $user="root";
-                $password="arifa";
-                $db="hmms";
-                $dbconn=mysqli_connect($host,$user,$password,$db);
                 $currentdate = date('Y-m-d');
                 $d = date_parse_from_format("Y-m-d", $currentdate);
                 $currentmonth = $d["month"];

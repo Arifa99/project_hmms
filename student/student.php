@@ -1,13 +1,9 @@
 <?php 
 session_start();
-
+include("studentdbconn.php");
     if(isset($_POST['submit']))
     { 
-        $host='localhost';
-        $user='root';
-        $pass='arifa';
-        $dbname='hmms';
-        $dbconn=mysqli_connect($host,$user,$pass,$dbname);
+        include("studentdbconn.php");
         
         //data take from form
         $enr=$_SESSION['enroll'];
@@ -250,11 +246,6 @@ if(document.getElementById('check').checked)
        
             <?php 
                 $enr=$_SESSION['enroll'];
-                $host="localhost";
-                $user="root";
-                $password="arifa";
-                $db="hmms";
-                $dbconn=mysqli_connect($host,$user,$password,$db);
                 $sqlget = "SELECT * FROM student WHERE enroll = '$enr'";
                 $sqldata = mysqli_query($dbconn, $sqlget) or die('error getting');
             ?>
@@ -322,19 +313,10 @@ if(document.getElementById('check').checked)
     
     <div id="menu" style="margin-left:35%; width:40%;margin-top:10px; height:auto; padding:10px; background-color:rgb(0,0,0,0.5);">
        <?php 
-             
-                $host="localhost";
-                $user="root";
-                $password="arifa";
-                $db="hmms";
-                $dbconn=mysqli_connect($host,$user,$password,$db);
 
-                
-                
-                $today= date('l');
+        $today= date('l');
         //echo "$today";
         
-   
         
         $select_q = "SELECT * FROM menu WHERE day = '$today'";
      
@@ -385,12 +367,6 @@ if(document.getElementById('check').checked)
              
               <?php 
                 $enr=$_SESSION['enroll'];
-            
-                $host="localhost";
-                $user="root";
-                $password="arifa";
-                $db="hmms";
-                $dbconn=mysqli_connect($host,$user,$password,$db);
                 $sqlget = "SELECT * FROM fees WHERE enrollno = '$enr'";
                 $sqldata = mysqli_query($dbconn, $sqlget) or die('error getting');
             ?>

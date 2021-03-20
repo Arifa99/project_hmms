@@ -1,5 +1,6 @@
 <?php 
 session_start();
+include("admindbconn.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -169,11 +170,6 @@ body{
     
            <?php 
                 $em=$_SESSION['email'];
-                $host="localhost";
-                $user="root";
-                $password="arifa";
-                $db="hmms";
-                $dbconn=mysqli_connect($host,$user,$password,$db);
                 $sqlget = "SELECT * FROM admin WHERE email = '$em'";
                 $sqldata = mysqli_query($dbconn, $sqlget) or die('error getting');
             ?>
@@ -208,12 +204,7 @@ body{
         <form>	
          <fieldset><legend class="legend" style="color:darkorange;"><b>STUDENT PRESENT</b></legend>	
 						 <?php 
-             
-                $host="localhost";
-                $user="root";
-                $password="arifa";
-                $db="hmms";
-                $dbconn=mysqli_connect($host,$user,$password,$db);
+        
                 $currentdate = date('Y-m-d');
                 $d = date_parse_from_format("Y-m-d", $currentdate);
                 $currentmonth = $d["month"];
@@ -233,11 +224,6 @@ body{
        <br><br>
 						 <?php 
              
-                $host="localhost";
-                $user="root";
-                $password="arifa";
-                $db="hmms";
-                $dbconn=mysqli_connect($host,$user,$password,$db);
                 $currentdate = date('Y-m-d');
                 $d = date_parse_from_format("Y-m-d", $currentdate);
                 $currentmonth = $d["month"];
@@ -268,12 +254,6 @@ body{
        
         <?php 
              
-                $host="localhost";
-                $user="root";
-                $password="arifa";
-                $db="hmms";
-                $dbconn=mysqli_connect($host,$user,$password,$db);
-
                 $select_q="select * from menu";
                 $q=mysqli_query($dbconn, $select_q);
       ?>
